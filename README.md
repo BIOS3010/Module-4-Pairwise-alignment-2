@@ -10,6 +10,15 @@ In this exercise, you will be working in your groups to manually generate a pair
 
 Look at the provided Example to the right to see an example of how to finish the exercise
 
+To access the correct values of the substitution matrix, you can use biopython:
+```python
+from Bio.Align import substitution_matrices
+names = substitution_matrices.load() # This is a list of the names of all available substitution matrices
+mat = substitution_matrices.load("BLOSUM62")
+mat["A"]["R"] # BLOSUM62 value of Alanine vs. Arginine
+```
+
+
 - Use the following code as inspiration. Modify the code according to your group's exercise. Use the code to check that your group's answer is correct:
 ```python
 from Bio import Align
