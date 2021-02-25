@@ -26,7 +26,6 @@ aligner = Align.PairwiseAligner()
 aligner.mode = 'global'
 aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
 aligner.gap_score = -5
-aligner.mode = 'local'
 
 seq1 = "WLCW"
 seq2= "WWGW"
