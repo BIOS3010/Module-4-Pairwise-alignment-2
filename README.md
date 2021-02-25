@@ -1,14 +1,13 @@
 # Module-4---Pairwise-alignment-2
 ## 4.1 Manual sequence alignment of protein sequences
 In this exercise, you will be working in your groups to manually generate a pairwise sequence alignment, just like we did last week. To do this, **each person in the group** draws up an alignment matrix and fills it in with the numbers and arrows between the cells. Indicate (using color or another way of higlighting) the backtracing of the optimal alignment(s). It is probably smart to find a piece of paper to draft your individual solutions. You can then either take picture of your piece of paper, or you can use the draw tool in Padlet. Feel free to use the padlet to share results with others in the group to compare your answers and verify whether they seem identical and correct.
-- The Padlet you should use is here: XXX
+- The Padlet you should use is here: https://uio.padlet.org/jonaspaulsen/m7ti9z0rhyf08wub
 - Each group should upload:
   1. **one** picture/drawing of an alignment matrix 
   2. The corresponding alignment(s) (use "code" formatting)
   3. Python code to generate the same alignment(s) (see below)
   4. Write "Done" at the bottom of your column, when your group is ready
 
-Look at the provided Example to the right to see an example of how to finish the exercise
 
 To access the correct values of the substitution matrix, you can use biopython:
 ```python
