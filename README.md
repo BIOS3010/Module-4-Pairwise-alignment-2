@@ -36,3 +36,23 @@ for alignment in alignments:
   print(alignment)
 ```
 
+## 4.2 Running BLAST using the online tool
+In this group exercise, we will try to identify human homologs of a the  sequence of the RecA protein in E. coli bacteria. 
+
+**Discuss in the group:**
+- What is a homologous sequence
+- Read about RecA on wikipedia: https://en.wikipedia.org/wiki/RecA Discuss in the group: 
+Do you expect there to be a homologous sequence in human?
+
+**Then do the following group work:**
+- Choose one in the group to share their screen.
+- Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/gene)
+- Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
+- Select "Protein BLAST"
+- Paste the copied FASTA entry into the Query sequence field
+- Select Organism "Homo sapiens (taxid:9606)"
+- Click "Algorithm parameters" and choose paramters according to what it says under your group in the Padlet
+- Click BLAST
+- Once the results are ready, describe your group's results in the Padlet using both text and/or images.
+
+
