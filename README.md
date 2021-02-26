@@ -44,6 +44,7 @@ In this group exercise, we will try to identify human homologs of a the  sequenc
 **Discuss in the group:**
 - What is a homologous sequence
 - Read about RecA on wikipedia: https://en.wikipedia.org/wiki/RecA Discuss in the group: 
+
 Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
@@ -58,4 +59,4 @@ Do you expect there to be a homologous sequence in human?
 - Click BLAST
 - Once the results are ready, describe your group's results in the Padlet using both text and/or images.
 
-
+Look at the "Example" to the right of the Padlet to get an impression of how to deliver your group's answer.
