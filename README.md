@@ -47,6 +47,7 @@ In this group exercise, we will try to identify human homologs of a the  sequenc
 Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
+- Open this padlet: https://uio.padlet.org/jonaspaulsen/oo4uo5iqeg9mzgo4
 - Choose one in the group to share their screen.
 - Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
