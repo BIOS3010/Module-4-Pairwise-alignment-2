@@ -8,6 +8,8 @@ In this exercise, you will be working in your groups to manually generate a pair
   3. Python code to generate the same alignment(s) (see below)
   4. Write "Done" at the bottom of your column, when your group is ready
 
+**When the results from the other groups are ready on the Padlet:**
+- Discuss in the group: Are the results as expected?
 
 To access the correct values of the substitution matrix, you can use biopython:
 ```python
