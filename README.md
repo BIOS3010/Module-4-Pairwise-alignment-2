@@ -29,7 +29,7 @@ aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
 aligner.gap_score = -5
 
 seq1 = "WLCW"
-seq2= "WWGW"
+seq2 = "WWGW"
 
 alignments = aligner.align(seq1,seq2)
 
@@ -59,3 +59,21 @@ In this group exercise, we will try to identify human homologs of a the  sequenc
 - Once the results are ready, describe your group's results in the Padlet using both text and/or images.
 
 Look at the "Example" to the right of the Padlet to get an impression of how to deliver your group's answer.
+
+## 4.3 Using affine gap penalties
+Use the following code as inspiration to explore the alignment of the protein sequences `WLCW` and `WWGW` using affine gap penalties:
+```python
+from Bio import Align
+from Bio.Align import substitution_matrices
+
+aligner = Align.PairwiseAligner()
+aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
+aligner.open_gap_score = -11
+aligner.extend_gap_score = -1
+aligner.mode = 'local'
+```
+
+```diff
+! Explain the concept of affine gap penalties
+! Do you see a difference with and without affine gap penalties?
+```
