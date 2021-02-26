@@ -48,7 +48,7 @@ Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
 - Choose one in the group to share their screen.
-- Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/gene)
+- Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
 - Select "Protein BLAST"
 - Paste the copied FASTA entry into the Query sequence field
