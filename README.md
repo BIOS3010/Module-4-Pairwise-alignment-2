@@ -74,6 +74,7 @@ aligner.mode = 'local'
 ```
 
 ```diff
-! Explain the concept of affine gap penalties
 ! Do you see a difference with and without affine gap penalties?
+! Explain the concept of affine gap penalties
+! How could affine gap penalties be applied in a manual alignment?
 ```
