@@ -60,8 +60,14 @@ In this group exercise, we will try to identify human homologs of a the  sequenc
 
 Look at the "Example" to the right of the Padlet to get an impression of how to deliver your group's answer.
 
+**Individual work:**
+
 ## 4.3 Using affine gap penalties
-Use the following code as inspiration to explore the alignment of the protein sequences `WLCW` and `WWGW` using affine gap penalties:
+Use the following code as inspiration to explore the optinal local alignments of the protein sequences `RLINLMPWVLATEYKNY` and `QFFPLMPPAPYWILATDFENY` using:
+- Non-affine gap penalty: -5, matrix: BLOSUM62
+- Affine gap penalties (open: -11, extend: -1), matrix: BLOSUM62
+- Affine gap penalties (open: -11, extend: -1), matrix: PAM30
+
 ```python
 from Bio import Align
 from Bio.Align import substitution_matrices
@@ -74,7 +80,7 @@ aligner.mode = 'local'
 ```
 
 ```diff
-! Do you see a difference with and without affine gap penalties?
+! Explain any differences in the optimal local alignments
 ! Explain the concept of affine gap penalties
 ! How could affine gap penalties be applied in a manual alignment?
 ```
