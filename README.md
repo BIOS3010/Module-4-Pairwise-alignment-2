@@ -78,3 +78,6 @@ aligner.mode = 'local'
 ! Explain the concept of affine gap penalties
 ! How could affine gap penalties be applied in a manual alignment?
 ```
+
+## 4.4
+https://biopython.readthedocs.io/en/latest/chapter_blast.html
