@@ -87,3 +87,16 @@ aligner.mode = 'local'
 
 ## 4.4
 https://biopython.readthedocs.io/en/latest/chapter_blast.html
+```python
+from Bio.Blast import NCBIWWW
+from Bio.Blast import NCBIXML
+>>> blast_records = NCBIXML.parse(result_handle)
+
+result_handle = NCBIWWW.qblast(program="blastp", database="nr", entrez_query="txid9606[ORGN]", sequence="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVETISTGSLSLDIALGAGGLPMGRIVEIYGPESSGKTTLTLQVIAAAQREGKTCAFIDAEHALDPIYARKLGVDIDNLLCSQPDTGEQALEICDALARSGAVDVIVVDSVAALTPKAEIEGEIGDSHMGLAARMMSQAMRKLAGNLKQSNTLLIFINQIRMKIGVMFGNPETTTGGNALKFYASVRLDIRRIGAVKEGENVVGSETRVKVVKNKIAAPFKQAEFQILYGEGINFYGELVDLGVKEKLIEKAGAWYSYKGEKIGQGKANATAWLKDNPETAKEIEKKVRELLLSNPNSTPDFSVDDSEGVAETNEDF")
+
+blast_records = NCBIXML.parse(result_handle)
+```
+
+
+Just like Bio.SeqIO and Bio.AlignIO, we have a pair of input functions, read and parse, where read is for when you have exactly one object, and parse is an iterator for when you can have lots of objects – but instead of getting SeqRecord or MultipleSeqAlignment objects, we get BLAST record objects.
+
