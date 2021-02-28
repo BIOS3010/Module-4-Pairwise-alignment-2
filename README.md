@@ -96,7 +96,7 @@ from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
 
 seq="RLDIRRIGAVKEGENVVGSETRVKVVKNKIAAPFKQA"
-result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.001, hitlist_size=10, sequence=seq)
+result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.01, hitlist_size=10, sequence=seq)
 blast_records = NCBIXML.parse(result_handle)
 ```
 
@@ -105,6 +105,7 @@ Just like we saw for `Bio.SeqIO` and `Bio.AlignIO` in Module 1, we have a pair o
 You can use a for loop to iterate over all the results in `blast_records`:
 ```python
 for blast_record in blast_records:
+  print("**** Num alignments:", len(blast_record.alignments))
   for alignment in blast_record.alignments:
     for hsp in alignment.hsps:
         print("****Alignment****")
