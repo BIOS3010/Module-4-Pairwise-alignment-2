@@ -83,20 +83,24 @@ aligner.mode = 'local'
 ! Explain any differences in the optimal local alignments
 ! Explain the concept of affine gap penalties
 ! How could affine gap penalties be applied in a manual alignment?
+! Advanced: Make a python script (`proteinalign.py`) that prints alignments of two input protein sequences
 ```
 
 ## 4.4
-https://biopython.readthedocs.io/en/latest/chapter_blast.html
+It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. 
 ```python
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
->>> blast_records = NCBIXML.parse(result_handle)
 
-result_handle = NCBIWWW.qblast(program="blastp", database="nr", entrez_query="txid9606[ORGN]", expect=0.01, sequence="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVETISTGSLSLDIALGAGGLPMGRIVEIYGPESSGKTTLTLQVIAAAQREGKTCAFIDAEHALDPIYARKLGVDIDNLLCSQPDTGEQALEICDALARSGAVDVIVVDSVAALTPKAEIEGEIGDSHMGLAARMMSQAMRKLAGNLKQSNTLLIFINQIRMKIGVMFGNPETTTGGNALKFYASVRLDIRRIGAVKEGENVVGSETRVKVVKNKIAAPFKQAEFQILYGEGINFYGELVDLGVKEKLIEKAGAWYSYKGEKIGQGKANATAWLKDNPETAKEIEKKVRELLLSNPNSTPDFSVDDSEGVAETNEDF")
-
+result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.01, sequence="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVET")
 blast_records = NCBIXML.parse(result_handle)
 ```
 
+Just like we saw for `Bio.SeqIO` and `Bio.AlignIO` in Module 1, we have a pair of input methods, `read` and `parse`, where read is for when you have exactly one object, and parse is an iterator for when you can have lots of objects – but instead of getting e.g. a `SeqRecord` object, we get BLAST record objects.
 
-Just like Bio.SeqIO and Bio.AlignIO, we have a pair of input functions, read and parse, where read is for when you have exactly one object, and parse is an iterator for when you can have lots of objects – but instead of getting SeqRecord or MultipleSeqAlignment objects, we get BLAST record objects.
+You can use a for loop to iterate over all the results in `blast_records`:
+```python
+for blast_record in blast_records:
+  print blast_record
+```
 
