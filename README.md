@@ -110,8 +110,8 @@ for blast_record in blast_records:
     for hsp in alignment.hsps:
         print("****Alignment****")
         print("sequence:", alignment.title)
-        print("length:", alignment.length)
         print("e value:", hsp.expect)
+        print(hsp.align_length)
         print(hsp.query)
         print(hsp.match)
         print(hsp.sbjct)
