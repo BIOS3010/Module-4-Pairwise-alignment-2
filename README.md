@@ -121,6 +121,6 @@ for blast_record in blast_records:
 ! Modify the code above to do a Blast search for the entire RecA sequence
 ! Explain/interpret the reults
 ! Modify the code above to work for nucleic acids
-! Blast a random nucleic acid sequence of 12 letters, and explain the results
-! Try both blasting against with a translated sequence, and against the genome sequences
+! Blast a random nucleic acid sequence of 30 letters, and explain the results
+! Try to blast this sequence and explain the results: GTCGTACTCGTATCGTGACTAGCTAGCTGCT
 ```
