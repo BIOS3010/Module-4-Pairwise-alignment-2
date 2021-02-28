@@ -92,7 +92,9 @@ It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This 
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
 
-result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.01, sequence="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVET")
+seq="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVET"
+seq="RLDIRRIGAVKEGENVVGSETRVKVVKNKIAAPFKQA"
+result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.001, hitlist_size=100, sequence=seq)
 blast_records = NCBIXML.parse(result_handle)
 ```
 
