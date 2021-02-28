@@ -86,8 +86,8 @@ aligner.mode = 'local'
 ! Advanced: Make a python script (`proteinalign.py`) that prints alignments of two input protein sequences
 ```
 
-## 4.4
-It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. 
+## 4.4 Running BLAST through Biopython
+It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. Note that the BLAST search will take a few miunutes, just as for the online BLAST tool.
 
 Here is an example of how to do this, blasting a protein sequence (with blastp) towards the `nr` database at expectation value level `0.001` and showing max `10` results. The example shows a blast search of part of the RecA sequence we worked with in exercise 4.2
 
