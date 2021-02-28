@@ -121,4 +121,5 @@ for blast_record in blast_records:
 ! Explain/interpret the reults
 ! Modify the code above to work for nucleic acids
 ! Blast a random nucleic acid sequence of 12 letters, and explain the results
+! Try both blasting against with a translated sequence, and against the genome sequences
 ```
