@@ -88,13 +88,16 @@ aligner.mode = 'local'
 
 ## 4.4
 It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. 
+
+Here is an example of how to do this, blasting a protein sequence (with blastp) towards the `nr` database at expectation value level `0.001` and showing max `10` results:
+
 ```python
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
 
 seq="MAIDENKQKALAAALGQIEKQFGKGSIMRLGEDRSMDVET"
 seq="RLDIRRIGAVKEGENVVGSETRVKVVKNKIAAPFKQA"
-result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.001, hitlist_size=100, sequence=seq)
+result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.001, hitlist_size=10, sequence=seq)
 blast_records = NCBIXML.parse(result_handle)
 ```
 
@@ -114,3 +117,10 @@ for blast_record in blast_records:
         print(hsp.sbjct)
 ```
 
+```diff
+! XX
+! XX
+! Modify the code above to work for nucleic acids
+! Blast a random nucleic acid sequence of 12 letters
+! Explain the results
+```
