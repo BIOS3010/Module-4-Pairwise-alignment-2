@@ -107,8 +107,8 @@ for blast_record in blast_records:
         print("sequence:", alignment.title)
         print("length:", alignment.length)
         print("e value:", hsp.expect)
-        print(hsp.query[0:75] + "...")
-        print(hsp.match[0:75] + "...")
-        print(hsp.sbjct[0:75] + "...")
+        print(hsp.query)
+        print(hsp.match)
+        print(hsp.sbjct)
 ```
 
