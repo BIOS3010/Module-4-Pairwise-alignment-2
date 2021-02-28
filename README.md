@@ -101,6 +101,14 @@ Just like we saw for `Bio.SeqIO` and `Bio.AlignIO` in Module 1, we have a pair o
 You can use a for loop to iterate over all the results in `blast_records`:
 ```python
 for blast_record in blast_records:
-  print blast_record
+  for alignment in blast_record.alignments:
+    for hsp in alignment.hsps:
+        print("****Alignment****")
+        print("sequence:", alignment.title)
+        print("length:", alignment.length)
+        print("e value:", hsp.expect)
+        print(hsp.query[0:75] + "...")
+        print(hsp.match[0:75] + "...")
+        print(hsp.sbjct[0:75] + "...")
 ```
 
