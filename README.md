@@ -1,5 +1,5 @@
 # Module-4---Pairwise-alignment-2
-## 4.1 Manual sequence alignment of protein sequences
+## 4.1 Manual sequence alignment of protein sequences (~1h.)
 In this exercise, you will be working in your groups to manually generate a pairwise sequence alignment, just like we did last week. To do this, **each person in the group** draws up an alignment matrix and fills it in with the numbers and arrows between the cells. Indicate (using color or another way of higlighting) the backtracing of the optimal alignment(s). It is probably smart to find a piece of paper to draft your individual solutions. You can then either take a picture of your piece of paper, or you can use the draw tool in Padlet. Feel free to use the padlet to share results with others in the group to compare your answers and verify whether they seem identical and correct.
 - The Padlet you should use is here: https://uio.padlet.org/jonaspaulsen/m7ti9z0rhyf08wub
 - Each group should upload:
@@ -7,9 +7,6 @@ In this exercise, you will be working in your groups to manually generate a pair
   2. The corresponding alignment(s) (use "code" formatting)
   3. Python code to generate the same alignment(s) (see below)
   4. Write "Done" at the bottom of your column, when your group is ready
-
-**When the results from the other groups are ready on the Padlet:**
-- Discuss in the group: Are the results as expected?
 
 To access the correct values of the substitution matrix, you can use biopython:
 ```python
@@ -38,8 +35,11 @@ for alignment in alignments:
   print(alignment)
 ```
 
-## 4.2 Running BLAST using the online tool
-In this group exercise, we will try to identify human homologs of a the  sequence of the RecA protein in E. coli bacteria. 
+**When the results from the other groups are ready on the Padlet:**
+- Discuss in the group: Are the results as expected?
+
+## 4.2 Running BLAST using the online tool (~30 min)
+In this group exercise, we will try to identify human homologs of a the sequence of the RecA protein in E. coli bacteria. 
 
 **Discuss in the group:**
 - What is a homologous sequence
@@ -48,13 +48,13 @@ In this group exercise, we will try to identify human homologs of a the  sequenc
 
 **Then do the following group work:**
 - Open this padlet: https://uio.padlet.org/jonaspaulsen/oo4uo5iqeg9mzgo4
-- Choose one in the group to share their screen.
+- Choose one in the group to share their screen
 - Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
 - Select "Protein BLAST"
 - Paste the copied FASTA entry into the Query sequence field
-- Select Organism "Homo sapiens (taxid:9606)"
-- Click "Algorithm parameters" and choose paramters according to what it says under your group in the Padlet
+- Select (i.e. type in) Organism "Homo sapiens (taxid:9606)"
+- Click "Algorithm parameters" and choose parameters according to what it says under your group in the Padlet
 - Click BLAST
 - Once the results are ready, describe your group's results in the Padlet using both text and/or images.
 
@@ -63,7 +63,7 @@ Look at the "Example" to the right of the Padlet to get an impression of how to 
 **Individual work:**
 
 ## 4.3 Using affine gap penalties
-Use the following code as inspiration to explore the optinal local alignments of the protein sequences `RLINLMPWVLATEYKNY` and `QFFPLMPPAPYWILATDFENY` using:
+Use the following code as inspiration to explore the optimal local alignments of the protein sequences `RLINLMPWVLATEYKNY` and `QFFPLMPPAPYWILATDFENY` using:
 - Non-affine gap penalty: -5, matrix: BLOSUM62
 - Affine gap penalties (open: -11, extend: -1), matrix: BLOSUM62
 - Affine gap penalties (open: -11, extend: -1), matrix: PAM30
@@ -80,16 +80,16 @@ aligner.mode = 'local'
 ```
 
 ```diff
-! Explain any differences in the optimal local alignments
+! Explain any differences in the three different local alignments
 ! Explain the concept of affine gap penalties
 ! How could affine gap penalties be applied in a manual alignment?
 ! Advanced: Make a python script (`proteinalign.py`) that prints alignments of two input protein sequences
 ```
 
 ## 4.4 Running BLAST through Biopython
-It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. Note that the BLAST search will take a few miunutes, just as for the online BLAST tool.
+It is possible to run BLAST (like we did in exercise 4.2) using Biopython. This will query the online BLAST sever, but will store and keep the results of the alignment in a Python object. Note that the BLAST search will take a few minutes, just as for the online BLAST tool.
 
-Here is an example of how to do this, blasting a protein sequence (with blastp) towards the `nr` database at expectation value level `0.001` and showing max `10` results. The example shows a blast search of part of the RecA sequence we worked with in exercise 4.2
+Here is an example of how to do this, blasting a protein sequence (with blastp) towards the **entire** `nr` database at expectation value level `0.01` and showing max `10` results. The example shows a blast search of part of the RecA sequence we worked with in exercise 4.2:
 
 ```python
 from Bio.Blast import NCBIWWW
@@ -100,7 +100,7 @@ result_handle = NCBIWWW.qblast(program="blastp", database="nr", expect=0.01, hit
 blast_records = NCBIXML.parse(result_handle)
 ```
 
-Just like we saw for `Bio.SeqIO` and `Bio.AlignIO` in Module 1, we have a pair of input methods, `read` and `parse`, where read is for when you have exactly one object, and parse is an iterator for when you can have lots of objects – but instead of getting e.g. a `SeqRecord` object, we get BLAST record objects.
+Just like we saw for `Bio.SeqIO` and `Bio.AlignIO` in Module 1, we have a pair of input methods, `read` and `parse`, where read is for when you have exactly one object, and parse gives an iterator for when you can have lots of objects – but instead of getting e.g. a `SeqRecord` object, we get BLAST record objects.
 
 You can use a for loop to iterate over all the results in `blast_records`:
 ```python
