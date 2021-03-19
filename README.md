@@ -122,5 +122,6 @@ for blast_record in blast_records:
 ! Explain/interpret the reults
 ! Modify the code above to work for nucleic acids
 ! Blast a random nucleic acid sequence of 30 letters, and explain the results
-! Try to blast this sequence and explain the results: GTCGTACTCGTATCGTGACTAGCTAGCTGCT
+! Try to blast this sequence: GTCGTACTCGTATCGTGACTAGCTAGCTGCT
+! Modify the E-value cutoff to see if you can get some hits
 ```
