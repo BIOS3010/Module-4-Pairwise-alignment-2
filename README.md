@@ -46,18 +46,17 @@ In this group exercise, we will try to identify human homologs of a the sequence
 - Discuss in the group:  Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
-- Open this padlet: https://uio.padlet.org/jonaspaulsen/oo4uo5iqeg9mzgo4
+- Open this padlet: https://uio.instructure.com/courses/36567/discussion_topics/233585
 - Choose one in the group to share their screen
 - Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
 - Select "Protein BLAST"
 - Paste the copied FASTA entry into the Query sequence field
 - Select (i.e. type in) Organism "Homo sapiens (taxid:9606)"
-- Click "Algorithm parameters" and choose parameters according to what it says under your group in the Padlet
+- Click "Algorithm parameters" and choose parameters according to what it says under your group on the Canvas discussion
 - Click BLAST
-- Once the results are ready, describe your group's results in the Padlet using both text and/or images.
+- Once the results are ready, describe your group's results as a post to the discussion. **Remember to start the post with your group number**
 
-Look at the "Example" to the right of the Padlet to get an impression of how to deliver your group's answer.
 
 **Individual work:**
 
