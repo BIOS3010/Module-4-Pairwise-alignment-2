@@ -34,7 +34,7 @@ for alignment in alignments:
   print(alignment)
 ```
 
-**When the results from the other groups are ready on the Padlet:**
+**When the results from the other groups are ready on the Canvas page:**
 - Discuss in the group: Are the results as expected?
 
 ## 4.2 Running BLAST using the online tool (~30 min)
@@ -46,7 +46,7 @@ In this group exercise, we will try to identify human homologs of a the sequence
 - Discuss in the group:  Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
-- Open this padlet: https://uio.instructure.com/courses/36567/discussion_topics/233585
+- Open this Canvas discussion: https://uio.instructure.com/courses/36567/discussion_topics/233585
 - Choose one in the group to share their screen
 - Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
