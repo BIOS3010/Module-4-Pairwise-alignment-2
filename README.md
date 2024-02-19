@@ -1,7 +1,7 @@
 # Module-4 - Pairwise alignment and BLASTing of protein sequences 
 ## 4.1 Manual sequence alignment of protein sequences (~45min.)
 In this exercise, you will be working in your groups to manually generate a pairwise sequence alignment, just like we did last week. To do this, **each person in the group** draws up an alignment matrix and fills it in with the numbers and arrows between the cells. Indicate (using color or another way of higlighting) the backtracing of the optimal alignment(s). It is probably smart to find a piece of paper to draft your individual solutions. You can then  take a picture of your piece of paper. Compare your answers within the group and verify whether they seem identical and correct.
-- Your group's answers should be posted to this Canvas discussion: https://uio.instructure.com/courses/36567/discussion_topics/233457
+- Your group's answers should be posted to this Canvas discussion: https://uio.instructure.com/courses/49183/discussion_topics/353497
 - Each group should upload:
   1. **one** picture/drawing of an alignment matrix 
   2. The corresponding alignment(s) (use "code" formatting)
@@ -46,7 +46,7 @@ In this group exercise, we will try to identify human homologs of a the sequence
 - Discuss in the group:  Do you expect there to be a homologous sequence in human?
 
 **Then do the following group work:**
-- Open this Canvas discussion: https://uio.instructure.com/courses/36567/discussion_topics/233585
+- Open this Canvas discussion: https://uio.instructure.com/courses/49183/discussion_topics/353498
 - Choose one in the group to share their screen
 - Find and copy the E. coli RecA protein sequence (FASTA format) from NCBI: (https://www.ncbi.nlm.nih.gov/protein)
 - Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi
